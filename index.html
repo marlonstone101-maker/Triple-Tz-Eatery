@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple T'z Eatery | Homestyle JA Food</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0b130f',
+            brandCard: '#13221a',
+            brandGreen: '#1b3b2b',
+            brandAccent: '#e05a47',
+            brandGold: '#d4af37'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+    </script>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-gray-100 font-sans antialiased selection:bg-brandAccent selection:text-white">
+
+<!-- Top Announcement Bar -->
+<div class="bg-gradient-to-r from-brandAccent to-amber-600 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center">
+    <i class="fa-solid fa-clock mr-2"></i> Open Mon–Sun: 8:00 AM – 9:00 PM | Call to Order: <a href="tel:8769699438" class="underline font-bold">876-969-9438</a>
+</div>
+
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-emerald-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-3 group">
+            <div class="w-12 h-12 rounded-full bg-emerald-950 border-2 border-brandAccent flex items-center justify-center shadow-lg overflow-hidden relative">
+                <img src="logo.jpg" alt="Triple T'z Eatery Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="absolute inset-0 items-center justify-center text-brandAccent font-black text-xl tracking-tighter bg-emerald-950" style="display: none;">T3</span>
+            </div>
+            <div>
+                <span class="text-xl font-extrabold tracking-wide text-white group-hover:text-brandAccent transition-colors">TRIPLE T'Z</span>
+                <span class="block text-xs uppercase tracking-widest text-emerald-400 font-semibold">Eatery</span>
+            </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <a href="#about" class="hover:text-brandAccent transition-colors">About</a>
+            <a href="#menu" class="hover:text-brandAccent transition-colors">Menu</a>
+            <a href="#order-form-section" class="hover:text-brandAccent transition-colors">Order Online</a>
+            <a href="#specials" class="hover:text-brandAccent transition-colors">Specials</a>
+            <a href="#contact" class="hover:text-brandAccent transition-colors">Location & Contact</a>
+        </nav>
+
+        <!-- CTA Order Button -->
+        <div class="hidden sm:flex items-center space-x-4">
+            <a href="#order-form-section" class="bg-brandAccent hover:bg-red-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-brandAccent/20 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-utensils mr-2"></i> Order Now
+            </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-btn" class="md:hidden text-gray-200 focus:outline-none text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brandCard border-b border-emerald-900/50 px-6 py-6 space-y-4">
+        <a href="#about" class="block text-base font-medium hover:text-brandAccent">About</a>
+        <a href="#menu" class="block text-base font-medium hover:text-brandAccent">Menu</a>
+        <a href="#order-form-section" class="block text-base font-medium hover:text-brandAccent">Order Online</a>
+        <a href="#specials" class="block text-base font-medium hover:text-brandAccent">Specials</a>
+        <a href="#contact" class="block text-base font-medium hover:text-brandAccent">Location & Contact</a>
+        <div class="pt-4 border-t border-emerald-900/50 flex flex-col space-y-3">
+            <a href="#order-form-section" class="bg-brandAccent text-center text-white py-3 rounded-xl font-semibold shadow-md">
+                <i class="fa-solid fa-utensils mr-2"></i> Order Now & Pay Online
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-b from-brandDark via-brandGreen/30 to-brandDark">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Hero Content -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-emerald-950/80 border border-emerald-800/60 px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-300">
+                    <span class="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span>
+                    <span>Kingston's Premier Homestyle Spot</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-none">
+                    Authentic <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-amber-500">Homestyle JA Food</span> 😋
+                </h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-light">
+                    Experience rich Jamaican flavors cooked to absolute perfection. From savory roasts and fresh natural juices to hot fish tea soups, we serve tradition with love at Annette Crescent.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#order-form-section" class="w-full sm:w-auto bg-brandAccent hover:bg-red-600 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brandAccent/30 transition-all text-center">
+                        <i class="fa-solid fa-credit-card mr-2"></i> Order Online & Pay
+                    </a>
+                    <a href="#menu" class="w-full sm:w-auto bg-brandCard hover:bg-emerald-950 border border-emerald-800 text-gray-200 font-semibold px-8 py-4 rounded-xl transition-all text-center">
+                        View Menu Pricing
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 border-t border-emerald-900/40 text-left">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-brandCard border border-emerald-800/50 flex items-center justify-center text-brandAccent">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-400">Location</span>
+                            <span class="text-sm font-semibold text-gray-200">1 Annette Crescent</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-brandCard border border-emerald-800/50 flex items-center justify-center text-brandAccent">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-400">Open Days</span>
+                            <span class="text-sm font-semibold text-gray-200">Mon - Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md bg-brandCard border border-emerald-800/60 rounded-3xl p-6 shadow-2xl shadow-emerald-950/50">
+                    <div class="absolute -top-3 -right-3 bg-brandAccent text-white text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full shadow-md">
+                        Featured Daily
+                    </div>
+                    <div class="h-64 rounded-2xl bg-gradient-to-tr from-emerald-900 via-brandGreen to-brandDark flex flex-col items-center justify-center p-6 text-center border border-emerald-800/40 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(#e05a47_1px,transparent_1px)] opacity-10 [background-size:12px_12px]"></div>
+                        <i class="fa-solid fa-utensils text-5xl text-brandAccent mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">Triple T'z Signature Plates</h3>
+                        <p class="text-sm text-gray-300">Prepared fresh every single day with authentic Jamaican spices and herbs.</p>
+                    </div>
+                    <div class="mt-6 space-y-3">
+                        <div class="flex justify-between items-center text-sm font-medium border-b border-emerald-900/50 pb-2">
+                            <span class="text-gray-300"><i class="fa-solid fa-bowl-food text-brandAccent mr-2"></i> Daily Menu Line</span>
+                            <span class="text-emerald-400 font-semibold">8:00 AM Onward</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium pt-1">
+                            <span class="text-gray-300"><i class="fa-solid fa-clock text-brandAccent mr-2"></i> Closing Time</span>
+                            <span class="text-emerald-400 font-semibold">9:00 PM Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-brandCard/50 border-y border-emerald-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-brandAccent">Welcome To Triple T'z</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Genuine Jamaican Taste Rooted in Community</h3>
+                <p class="text-gray-300 leading-relaxed font-light">
+                    Located right in the heart of Kingston 10 at 1 Annette Crescent, Triple T'z Eatery is your ultimate destination for wholesome, mouth-watering homestyle Jamaican food. Whether you are craving a hearty plate of oxtail, curry goat, fresh natural juices, or comforting fish tea soup, our kitchen delivers peak island flavor.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-2">
+                    <div class="bg-brandDark p-4 rounded-2xl border border-emerald-900/40">
+                        <span class="block text-3xl font-extrabold text-brandAccent mb-1">100%</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider font-medium">Authentic Recipes</span>
+                    </div>
+                    <div class="bg-brandDark p-4 rounded-2xl border border-emerald-900/40">
+                        <span class="block text-3xl font-extrabold text-brandAccent mb-1">Daily</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider font-medium">Fresh Ingredients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-brandDark p-8 rounded-3xl border border-emerald-900/60 shadow-xl space-y-6">
+                <h4 class="text-xl font-bold text-white flex items-center">
+                    <i class="fa-solid fa-store text-brandAccent mr-3"></i> Operating Hours
+                </h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex justify-between items-center border-b border-emerald-900/40 pb-3">
+                        <span class="text-gray-300 font-medium">Monday – Sunday</span>
+                        <span class="font-bold text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-lg">8:00 AM – 9:00 PM</span>
+                    </li>
+                </ul>
+                <div class="pt-2">
+                    <a href="tel:8769699438" class="block w-full text-center bg-brandGreen hover:bg-emerald-900 text-white font-semibold py-3 rounded-xl border border-emerald-700/50 transition-colors">
+                        <i class="fa-solid fa-phone mr-2 text-brandAccent"></i> Call Line: 876-969-9438
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-24 bg-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brandAccent">Our Selections</h2>
+            <h3 class="text-3xl sm:text-5xl font-black text-white">The Menu</h3>
+            <p class="text-gray-300">Explore our signature homestyle Jamaican entrees, natural juices, sides, soups, and desserts.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Entrees -->
+            <div class="bg-brandCard rounded-3xl p-6 border border-emerald-900/50 shadow-xl flex flex-col justify-between hover:border-emerald-700/60 transition-all">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h4 class="text-xl font-bold text-white flex items-center">
+                            <i class="fa-solid fa-bowl-food text-brandAccent mr-2"></i> Entree
+                        </h4>
+                        <span class="text-xs bg-emerald-950 text-emerald-300 font-semibold px-2.5 py-1 rounded-md">Main Dishes</span>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Cranberry Roast Chicken</span>
+                            <span class="text-brandAccent font-bold">$1,500</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Roast Beef</span>
+                            <span class="text-brandAccent font-bold">$1,400</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">BBQ Ribs</span>
+                            <span class="text-brandAccent font-bold">$1,700</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Curried Goat</span>
+                            <span class="text-brandAccent font-bold">$950</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Esco Slice Fish</span>
+                            <span class="text-brandAccent font-bold">$1,200</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sides & Soups -->
+            <div class="bg-brandCard rounded-3xl p-6 border border-emerald-900/50 shadow-xl flex flex-col justify-between hover:border-emerald-700/60 transition-all">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h4 class="text-xl font-bold text-white flex items-center">
+                            <i class="fa-solid fa-utensils text-brandAccent mr-2"></i> Sides & Soups
+                        </h4>
+                        <span class="text-xs bg-emerald-950 text-emerald-300 font-semibold px-2.5 py-1 rounded-md">Accompaniments</span>
+                    </div>
+                    <ul class="space-y-3 text-sm mb-6">
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Festival</span>
+                            <span class="text-brandAccent font-bold">$450</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Fries</span>
+                            <span class="text-brandAccent font-bold">$400</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-emerald-900/30 pb-2.5">
+                            <span class="text-gray-200 font-medium">Pumpkin Rice</span>
+                            <span class="text-brandAccent font-bold">$450</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2.5">
+                            <span class="text-gray-200 font-medium">Steam Veg</span>
+                            <span class="text-brandAccent font-bold">$450</span>
+                        </li>
+                    </ul>
+                    <div class="bg-emerald-950/60 border border-emerald-800/50 p-4 rounded-2xl">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-brandAccent mb-1">Soups</span>
+                        <div class="flex justify-between items-center text-sm font-semibold text-white">
+                            <span>Fish Tea</span>
+                            <span class="text-xs text-emerald-300 font-normal">Sm: $300 | Md: $800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juices & Desserts -->
+            <div class="bg-brandCard rounded-3xl p-6 border border-emerald-900/50 shadow-xl flex flex-col justify-between hover:border-emerald-700/60 transition-all md:col-span-2 lg:col-span-1">
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-white flex items-center">
+                                <i class="fa-solid fa-glass-water text-brandAccent mr-2"></i> Natural Juices
+                            </h4>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between items-center text-gray-200 border-b border-emerald-900/20 pb-2"><span>Lemonade</span><span class="text-brandAccent font-bold">$350</span></li>
+                            <li class="flex justify-between items-center text-gray-200 border-b border-emerald-900/20 pb-2"><span>Fruit Punch</span><span class="text-brandAccent font-bold">$400</span></li>
+                            <li class="flex justify-between items-center text-gray-200 pb-2"><span>Apple</span><span class="text-brandAccent font-bold">$350</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-emerald-900/40">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-white flex items-center">
+                                <i class="fa-solid fa-cake-candles text-brandAccent mr-2"></i> Desserts
+                            </h4>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between items-center text-gray-200 border-b border-emerald-900/20 pb-2"><span>Cheesecake</span><span class="text-brandAccent font-bold">$600</span></li>
+                            <li class="flex justify-between items-center text-gray-200 pb-2"><span>Apple Pie</span><span class="text-brandAccent font-bold">$500</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#order-form-section" class="block w-full text-center bg-brandAccent hover:bg-red-600 text-white font-bold py-3 rounded-xl transition-all shadow-md">
+                        Order These Items Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Form Section -->
+<section id="order-form-section" class="py-24 bg-brandCard/90 border-t border-emerald-900/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-12">
+            <div class="inline-flex items-center space-x-2 bg-emerald-950 border border-emerald-800 px-4 py-1.5 rounded-full text-xs font-semibold text-brandAccent">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Secure Online Checkout</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white">Place Your Order & Pay Online</h2>
+            <p class="text-gray-300">Select the quantities for your favorite items below, fill in your details, and securely pay with your debit or credit card.</p>
+        </div>
+
+        <form id="checkout-form" class="bg-brandDark border border-emerald-900/60 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+            <!-- Customer Details -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <span class="w-8 h-8 rounded-full bg-brandAccent text-white flex items-center justify-center text-sm mr-3">1</span>
+                    Customer & Fulfillment Information
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Full Name *</label>
+                        <input type="text" id="cust-name" required placeholder="John Doe" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Phone Number *</label>
+                        <input type="tel" id="cust-phone" required placeholder="876-555-0199" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address *</label>
+                        <input type="email" id="cust-email" required placeholder="tripletzeatery@gmail.com" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Order Type *</label>
+                        <select id="order-type" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                            <option value="pickup">Pickup at 1 Annette Crescent, Kingston 10</option>
+                            <option value="delivery">Delivery (Kingston Area)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item Matrix -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <span class="w-8 h-8 rounded-full bg-brandAccent text-white flex items-center justify-center text-sm mr-3">2</span>
+                    Choose Your Items & Quantities
+                </h3>
+                <div class="space-y-4 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+                    <div class="space-y-3">
+                        <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold pt-2">Entrees ($ JMD)</div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Cranberry Roast Chicken</span><span class="text-xs text-brandAccent font-bold">$1,500</span></div>
+                            <input type="number" min="0" value="0" data-price="1500" data-name="Cranberry Roast Chicken" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Roast Pork</span><span class="text-xs text-brandAccent font-bold">$1,500</span></div>
+                            <input type="number" min="0" value="0" data-price="1500" data-name="Roast Pork" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Roast Beef</span><span class="text-xs text-brandAccent font-bold">$1,500</span></div>
+                            <input type="number" min="0" value="0" data-price="1500" data-name="Roast Beef" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Charcoal Chicken</span><span class="text-xs text-brandAccent font-bold">$1,400</span></div>
+                            <input type="number" min="0" value="0" data-price="1400" data-name="Charcoal Chicken" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">BBQ Ribs</span><span class="text-xs text-brandAccent font-bold">$1,900</span></div>
+                            <input type="number" min="0" value="0" data-price="1900" data-name="BBQ Ribs" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Oxtail & Bean</span><span class="text-xs text-brandAccent font-bold">$1,700</span></div>
+                            <input type="number" min="0" value="0" data-price="1700" data-name="Oxtail & Bean" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Curried Goat</span><span class="text-xs text-brandAccent font-bold">$1,500</span></div>
+                            <input type="number" min="0" value="0" data-price="1500" data-name="Curried Goat" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fried Chicken</span><span class="text-xs text-brandAccent font-bold">$950</span></div>
+                            <input type="number" min="0" value="0" data-price="950" data-name="Fried Chicken" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Esco Slice Fish</span><span class="text-xs text-brandAccent font-bold">$1,150</span></div>
+                            <input type="number" min="0" value="0" data-price="1150" data-name="Esco Slice Fish" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Brownstew Sliced Fish</span><span class="text-xs text-brandAccent font-bold">$1,200</span></div>
+                            <input type="number" min="0" value="0" data-price="1200" data-name="Brownstew Sliced Fish" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+
+                        <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold pt-4">Sides & Soups ($ JMD)</div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Festival</span><span class="text-xs text-brandAccent font-bold">$450</span></div>
+                            <input type="number" min="0" value="0" data-price="450" data-name="Festival" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Bammy</span><span class="text-xs text-brandAccent font-bold">$450</span></div>
+                            <input type="number" min="0" value="0" data-price="450" data-name="Bammy" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fries</span><span class="text-xs text-brandAccent font-bold">$450</span></div>
+                            <input type="number" min="0" value="0" data-price="450" data-name="Fries" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Rice & Peas</span><span class="text-xs text-brandAccent font-bold">$400</span></div>
+                            <input type="number" min="0" value="0" data-price="400" data-name="Rice & Peas" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Pumpkin Rice</span><span class="text-xs text-brandAccent font-bold">$400</span></div>
+                            <input type="number" min="0" value="0" data-price="400" data-name="Pumpkin Rice" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Mashed Potato</span><span class="text-xs text-brandAccent font-bold">$450</span></div>
+                            <input type="number" min="0" value="0" data-price="450" data-name="Mashed Potato" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Steam Veg</span><span class="text-xs text-brandAccent font-bold">$450</span></div>
+                            <input type="number" min="0" value="0" data-price="450" data-name="Steam Veg" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fish Tea Soup (Small)</span><span class="text-xs text-brandAccent font-bold">$300</span></div>
+                            <input type="number" min="0" value="0" data-price="300" data-name="Fish Tea Soup (Small)" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fish Tea Soup (Medium)</span><span class="text-xs text-brandAccent font-bold">$500</span></div>
+                            <input type="number" min="0" value="0" data-price="500" data-name="Fish Tea Soup (Medium)" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fish Tea Soup (Large)</span><span class="text-xs text-brandAccent font-bold">$800</span></div>
+                            <input type="number" min="0" value="0" data-price="800" data-name="Fish Tea Soup (Large)" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+
+                        <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold pt-4">Natural Juices & Desserts ($ JMD)</div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Lemonade</span><span class="text-xs text-brandAccent font-bold">$350</span></div>
+                            <input type="number" min="0" value="0" data-price="350" data-name="Lemonade" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Juneplum Juice</span><span class="text-xs text-brandAccent font-bold">$350</span></div>
+                            <input type="number" min="0" value="0" data-price="350" data-name="Juneplum Juice" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Fruit Punch</span><span class="text-xs text-brandAccent font-bold">$350</span></div>
+                            <input type="number" min="0" value="0" data-price="350" data-name="Fruit Punch" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Coconut Water</span><span class="text-xs text-brandAccent font-bold">$400</span></div>
+                            <input type="number" min="0" value="0" data-price="400" data-name="Coconut Water" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Apple Juice</span><span class="text-xs text-brandAccent font-bold">$350</span></div>
+                            <input type="number" min="0" value="0" data-price="350" data-name="Apple Juice" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Soda</span><span class="text-xs text-brandAccent font-bold">$600</span></div>
+                            <input type="number" min="0" value="0" data-price="200" data-name="Soda" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                        <div class="flex items-center justify-between bg-brandCard p-3 rounded-xl border border-emerald-900/40">
+                            <div><span class="block text-sm font-semibold text-white">Cheesecake</span><span class="text-xs text-brandAccent font-bold">$500</span></div>
+                            <input type="number" min="0" value="0" data-price="500" data-name="Cheesecake" class="item-qty w-20 bg-brandDark border border-emerald-900 rounded-lg text-center py-1.5 text-white font-semibold focus:outline-none focus:border-brandAccent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="pt-4 border-t border-emerald-900/50">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <span class="w-8 h-8 rounded-full bg-brandAccent text-white flex items-center justify-center text-sm mr-3">3</span>
+                    Card Payment Details <i class="fa-solid fa-lock ml-2 text-xs text-emerald-400"></i>
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Cardholder Name *</label>
+                        <input type="text" id="card-name" required placeholder="Name on card" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Card Number *</label>
+                        <div class="relative">
+                            <input type="text" id="card-number" required placeholder="4242 •••• •••• 4242" maxlength="19" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent pr-12">
+                            <div class="absolute right-3 top-3 text-gray-400 text-lg">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Expiration Date *</label>
+                        <input type="text" id="card-expiry" required placeholder="MM/YY" maxlength="5" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">CVV / Security Code *</label>
+                        <input type="password" id="card-cvv" required placeholder="123" maxlength="4" class="w-full bg-brandCard border border-emerald-900/60 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandAccent">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total & Submit -->
+            <div class="bg-emerald-950/60 border border-emerald-800/50 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="block text-xs text-emerald-400 uppercase tracking-wider font-semibold">Total Amount Due</span>
+                    <span id="order-total" class="text-3xl font-black text-white">$0 <span class="text-sm font-normal text-gray-300">JMD</span></span>
+                </div>
+                <button type="submit" class="w-full sm:w-auto bg-brandAccent hover:bg-red-600 text-white font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-brandAccent/30 transition-all text-center">
+                    <i class="fa-solid fa-lock mr-2"></i> Pay & Place Order Now
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="order-success-msg" class="hidden bg-emerald-950 border border-emerald-500 rounded-3xl p-8 text-center space-y-4 mt-6">
+            <div class="w-16 h-16 bg-emerald-500 text-brandDark rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white">Order Placed & Paid Successfully!</h3>
+            <p id="success-details" class="text-sm text-gray-300 max-w-md mx-auto"></p>
+            <button type="button" id="reset-order-btn" class="bg-brandCard border border-emerald-700 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-all">
+                Place Another Order
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Specials / Notice Section -->
+<section id="specials" class="py-20 bg-gradient-to-r from-emerald-950 via-brandGreen to-brandDark border-y border-emerald-800/40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div class="w-16 h-16 rounded-full bg-brandAccent/20 border border-brandAccent flex items-center justify-center mx-auto text-brandAccent text-2xl">
+            <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Important Ordering Notice</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+            To ensure quick service and accuracy for all our valued customers, please use our secure online form above or call us directly. <strong class="text-white">Please note: We do not accept orders or customer inquiries via Instagram DMs!</strong>
+        </p>
+        <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a href="tel:8769699438" class="bg-brandAccent hover:bg-red-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
+                <i class="fa-solid fa-phone mr-2"></i> Main Line: 876-969-9438
+            </a>
+            <a href="tel:8769691345" class="bg-brandCard hover:bg-emerald-900 border border-emerald-700 text-gray-200 font-semibold px-8 py-4 rounded-xl transition-all">
+                <i class="fa-solid fa-phone mr-2"></i> Alt Line: 876-969-1345
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Location Section -->
+<section id="contact" class="py-24 bg-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-brandAccent">Visit Us Today</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-white">Location & Contact Info</h3>
+                <p class="text-gray-300 font-light">
+                    Stop by our physical location at Annette Crescent or order ahead online to have your homestyle meal prepared fresh and ready for pickup.
+                </p>
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-start space-x-4 bg-brandCard p-5 rounded-2xl border border-emerald-900/50">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-brandAccent shrink-0 mt-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Address</h4>
+                            <p class="text-sm text-gray-300 mt-1">1 Annette Crescent, Kingston 10, Jamaica</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 bg-brandCard p-5 rounded-2xl border border-emerald-900/50">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-brandAccent shrink-0 mt-1">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Phone Contacts</h4>
+                            <p class="text-sm text-gray-300 mt-1">
+                                <a href="tel:8769699438" class="hover:text-brandAccent underline">876-969-9438</a> (Main)<br>
+                                <a href="tel:8769691345" class="hover:text-brandAccent underline">876-969-1345</a> (Backup)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 bg-brandCard p-5 rounded-2xl border border-emerald-900/50">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-brandAccent shrink-0 mt-1">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white uppercase tracking-wider">Inquiries</h4>
+                            <p class="text-sm text-gray-300 mt-1">Please email us for general questions or large orders. No DMs!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Card -->
+            <div class="bg-brandCard p-6 rounded-3xl border border-emerald-900/60 shadow-2xl">
+                <div class="h-80 w-full rounded-2xl bg-emerald-950 border border-emerald-900/50 flex flex-col items-center justify-center text-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] opacity-10 [background-size:16px_16px]"></div>
+                    <i class="fa-solid fa-map-location-dot text-6xl text-brandAccent mb-4 animate-bounce"></i>
+                    <h4 class="text-xl font-bold text-white">Find Us in Kingston 10</h4>
+                    <p class="text-sm text-gray-300 mt-2 max-w-sm">1 Annette Crescent, Kingston, Jamaica</p>
+                    <a href="https://maps.google.com/?q=1+Annette+Crescent+Kingston+10+Jamaica" target="_blank" class="mt-6 bg-brandAccent hover:bg-red-600 text-white text-sm font-semibold px-6 py-2.5 rounded-xl shadow-lg transition-all">
+                        Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-brandCard border-t border-emerald-900/50 py-12 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-950 border border-brandAccent flex items-center justify-center text-brandAccent font-black text-sm overflow-hidden relative">
+                <img src="logo.jpg" alt="Triple T'z Eatery Logo" class="w-full h-full object-cover" onerror="this.style.display='none';">
+            </div>
+            <div>
+                <span class="font-bold text-white tracking-wide">TRIPLE T'Z EATERY</span>
+                <p class="text-xs text-emerald-400">Homestyle JA Food 😋</p>
+            </div>
+        </div>
+
+        <p class="text-xs text-center md:text-left">
+            © <span id="year"></span> Triple T'z Eatery. All rights reserved. Built for mobile, tablet, and desktop.
+        </p>
+
+        <div class="flex items-center space-x-4">
+            <a href="https://instagram.com/tttzeatery" target="_blank" class="w-10 h-10 rounded-xl bg-brandDark border border-emerald-900 flex items-center justify-center text-gray-300 hover:text-brandAccent hover:border-brandAccent transition-all">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="tel:8769699438" class="w-10 h-10 rounded-xl bg-brandDark border border-emerald-900 flex items-center justify-center text-gray-300 hover:text-brandAccent hover:border-brandAccent transition-all">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Interactive JavaScript -->
+<script>
+// Toggle Mobile Navigation Menu
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
+// Dynamic Copyright Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Calculate Total Price Dynamically
+const qtyInputs = document.querySelectorAll('.item-qty');
+const orderTotalDisplay = document.getElementById('order-total');
+
+function calculateTotal() {
+    let total = 0;
+    qtyInputs.forEach(input => {
+        const qty = parseInt(input.value) || 0;
+        const price = parseInt(input.getAttribute('data-price')) || 0;
+        total += qty * price;
+    });
+    orderTotalDisplay.innerHTML = `$${total.toLocaleString()} <span class="text-sm font-normal text-gray-300">JMD</span>`;
+    return total;
+}
+
+qtyInputs.forEach(input => {
+    input.addEventListener('input', calculateTotal);
+});
+
+// Handle Form Submission
+const checkoutForm = document.getElementById('checkout-form');
+const successMsgBox = document.getElementById('order-success-msg');
+const successDetails = document.getElementById('success-details');
+const resetOrderBtn = document.getElementById('reset-order-btn');
+
+checkoutForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const total = calculateTotal();
+    if (total <= 0) {
+        alert('Please select at least one item to order before proceeding with card payment.');
+        return;
+    }
+
+    const name = document.getElementById('cust-name').value;
+    const phone = document.getElementById('cust-phone').value;
+    const orderType = document.getElementById('order-type').value;
+
+    const summaryText = `Thank you, ${name}! Your card payment has been processed successfully. Your order total is $${total.toLocaleString()} JMD for ${orderType.toUpperCase()}. We will contact you at ${phone} when your meal is ready!`;
+
+    successDetails.textContent = summaryText;
+    checkoutForm.classList.add('hidden');
+    successMsgBox.classList.remove('hidden');
+    successMsgBox.scrollIntoView({ behavior: 'smooth' });
+});
+
+resetOrderBtn.addEventListener('click', () => {
+    checkoutForm.reset();
+    calculateTotal();
+    successMsgBox.classList.add('hidden');
+    checkoutForm.classList.remove('hidden');
+    checkoutForm.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
